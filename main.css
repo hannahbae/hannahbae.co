@@ -1,0 +1,290 @@
+/*-------------
+ FONTS
+--------------*/
+
+@font-face {
+	font-family: 'Syne Extra';
+	src: url('./fonts/Syne-Extra.woff2') format('woff2'),
+			 url('./fonts/Syne-Extra.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Univers LT Std 63';
+	src: url('./fonts/UniversLTStd-BoldEx.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Univers LT Std 73';
+	src: url('./fonts/UniversLTStd-BlackEx.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Univers LT Std 93';
+	src: url('./fonts/UniversLTStd-XBlackEx.woff') format('woff');
+}
+
+
+/*-------------
+ CSS RESET 
+--------------*/
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*-------------
+ BASE STRUCTURE 
+--------------*/
+
+html,
+body {
+  font-family: 'Jura', monospace;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #3e439b;
+  background-color: #fff4e4;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5
+}
+
+::selection {
+	color: #fff4e4;
+	background: #3e439b;
+}
+
+a {
+  color: #3e439b;
+}
+ 
+a:hover {
+	color: #c34141;
+	font-style: italic;
+}
+
+.line {
+	width: 100%;
+	height: 6px;
+	background-color: #3e439b;
+}
+
+.section-title {
+	font-family: 'Univers LT Std 73', sans-serif;
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+
+
+/*-------------
+ HEADER / NAVBAR
+--------------*/
+
+.navbar {
+	margin: 0 auto;
+	padding-bottom: 1em;
+	text-align: center;
+	align-items: center;
+}
+
+.logo {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 12.5vw;
+	font-family: 'Faster One', cursive;
+}
+
+.main-nav li {
+	font-family: 'Univers LT Std 63', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1em;
+}
+
+
+@media only screen and (min-width: 900px) {
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: 70px;
+		align-items: flex-end;
+	}
+
+	.logo {
+		font-size: 3rem;
+		margin-left: 40px;
+	}
+
+	.main-nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-right: 40px;
+	}
+
+	.nav-links {
+		margin: 0 1em;
+	}
+
+}
+
+
+/*-------------
+ HERO
+--------------*/
+
+.hero-section {
+  background-image: radial-gradient(#3e439b 15%, transparent 0),
+    radial-gradient(#3e439b 15%, transparent 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+.hero-section-text {
+	margin: auto;
+	transform: rotate(-5deg);
+	padding-top: 4rem;
+	padding-bottom: 6rem;
+	width: 50%;
+	max-width: 30rem;
+	font-size: 2rem;
+	font-style:italic;
+	line-height: 1.1;
+	font-family: 'Racing Sans One', cursive;
+}
+
+
+/*-------------
+ PORTFOLIO
+--------------*/
+
+#portfolio {
+	background-color: #fff;
+	padding: 40px;
+	padding-top: 0;
+}
+
+.section-title {
+	text-align: left;
+	position: relative;
+	bottom: 1rem;
+}
+
+.project-grid {
+	display: grid;
+	grid-gap: 5%;
+	margin: 2rem 3rem;
+}
+
+.project-card {
+	max-width: 20rem;
+	margin: auto;
+}
+
+.card-content {
+	text-align: left;
+	justify-content: center;
+}
+
+.project-thumbnail {
+	max-width: 100%;
+	margin: 0 auto;
+	height: auto;
+	display: block;
+}
+
+.project-title {
+	font-family: 'Univers LT Std 63';
+}
+
+.project-description {
+	margin: auto;
+	font-weight: 400;
+	color: #5c6193;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-content: center;
+		grid-gap: 0;
+	}
+
+	.project-card {
+		width: 90%;
+		padding: 0;
+	}
+}
+}
+
+/*-------------
+ ABOUT
+
+#about {
+	background-color: #fff4e4;
+	padding: 40px;
+	padding-top: 0;
+	text-align: left;
+}
+
+--------------*/
+
+/*-------------
+ FOOTER
+--------------*/
+
+footer {
+	width: 100%;
+	background-color: #fff4e4;
+}
+
+footer .container {
+	padding: 2rem;
+}
+
+#social {
+	margin: 1rem auto;
+}
+
+#social-list li {
+	display: inline-block;
+	padding: 0 .3rem;
+}
+
+#social-list svg {
+	height: 1.3rem;
+	fill: #c34141;
+}
+
+#social-list svg:hover{
+	fill: #bf7979;
+}
