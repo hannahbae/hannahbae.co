@@ -70,11 +70,13 @@ body {
 }
 
 a {
-  color: #3e439b;
+  color: #bf7979;
+  font-weight: 900;
 }
  
 a:hover {
 	color: #c34141;
+	font-weight: 900;
 	font-style: italic;
 }
 
@@ -101,6 +103,21 @@ a:hover {
 	padding-bottom: 1em;
 	text-align: center;
 	align-items: center;
+}
+
+.navbar a {
+	color: #3e439b;
+}
+
+.navbar a:hover {
+	color: #fff4e4;
+	font-style: normal;
+	text-decoration: none;
+	text-shadow:
+		-1px -1px 0 #3e439b,
+		1px -1px 0 #3e439b,
+		-1px 1px 0 #3e439b,
+		1px 1px 0 #3e439b;
 }
 
 .logo {
@@ -182,7 +199,7 @@ a:hover {
 	padding-top: 0;
 }
 
-.section-title {
+#portfolio .section-title {
 	text-align: left;
 	position: relative;
 	bottom: 1rem;
@@ -195,8 +212,8 @@ a:hover {
 }
 
 .project-card {
+	margin: 0 auto;
 	max-width: 20rem;
-	margin: auto;
 }
 
 .card-content {
@@ -248,15 +265,109 @@ a:hover {
 
 /*-------------
  ABOUT
+--------------*/
 
 #about {
-	background-color: #fff4e4;
-	padding: 40px;
 	padding-top: 0;
-	text-align: left;
 }
 
---------------*/
+#about .section-title {
+	padding: 2rem;
+	text-align: left;
+	position: relative;
+	bottom: 3rem;
+}
+
+.about-main {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0 1rem;
+}
+
+#avatar {
+	opacity: 0.8;
+	width: 40%;
+	max-width: 12rem;
+}
+
+.about-text {
+	text-align: left;
+	margin: 1rem auto;
+	max-width: 30rem;
+	position: relative;
+	bottom: 3rem;
+	padding: 3rem 0 5rem;
+}
+
+.about-text p {
+	padding: .5rem;
+}
+
+.about-text li {
+	list-style-type: square;
+	list-style-position: inside;
+	padding: 0 2rem;
+}
+
+.about-text h3 {
+	font-family: 'Univers LT Std 93';
+}
+
+#hello {
+	font-size: 1.5rem;
+}
+
+.playlist {
+	display: block;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+#contact {
+	padding: 0 1rem;
+	margin: 0;
+	font-weight: 300;
+}
+
+#contact a {
+	color: #3e439b;
+}
+
+#contact a:hover {
+	font-style: normal;
+}
+
+#resume {
+	padding: 2rem 1rem 0;
+}
+
+@media only screen and (min-width: 900px) {
+	.about-main {
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 0 4rem;
+	}
+
+	.avatar {
+		justify-content: right;
+	}
+
+	#avatar {
+		width: 90%;
+		max-width: 10rem;
+	}
+
+	.about-text {
+		margin: 0 2rem;
+		max-width: 50rem;
+	}
+
+	.about-text p {
+		padding: 1rem;
+	}
+}
+
 
 /*-------------
  FOOTER
@@ -264,7 +375,7 @@ a:hover {
 
 footer {
 	width: 100%;
-	background-color: #fff4e4;
+	background-color: #fff;
 }
 
 footer .container {
@@ -282,9 +393,9 @@ footer .container {
 
 #social-list svg {
 	height: 1.3rem;
-	fill: #c34141;
+	fill: #bf7979;
 }
 
 #social-list svg:hover{
-	fill: #bf7979;
+	fill: #c34141;
 }
