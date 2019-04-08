@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Warren Graphic Design ✧ Hannah Bae</title>
+
+    <!-- main.css -->
+  	<link rel="stylesheet" type="text/css" href="main.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Jura:500" rel="
+    stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Goblin+One|Racing+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+
+    <!-- javascript -->
+    <script>
+      // Open the Modal
+      function openModal() {
+        document.getElementById('myModal').style.display = "block";
+      }
+
+      // Close the Modal
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+  </head>
+
+  <body>
+    <div class="line"></div>
+    <div class="wrapper">
+
+      <!-- header/navbar -->
+      <nav class="navbar">
+        <a href="index.html" class="logo">Hannah Bae</a>
+        <ul class="main-nav">
+          <li>
+            <a href="index.html" class="nav-links">Portfolio</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-links">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- hero -->
+      <div class="hero-section">
+        <div class="hero-section-text">
+        </div>
+      </div>
+
+      <!-- project section -->
+      <div id="project">
+        <h1 class="project-name">Warren College Graphic Design</h1>
+
+        <div class="content">
+
+        	<div id="side">
+
+        		<div class="info">
+        			<h4>Date</h4>
+        			<p>October 2018 - present</p>
+        		</div>
+
+        		<div class="info">
+        			<h4>Role</h4>
+        			<p>graphic designer</p>
+        		</div>
+
+        		<div class="info">
+        			<h4>Skills</h4>
+        			<p>graphic design, logo design</p>
+        		</div>
+
+        		<div class="info">
+        			<h4>Tools</h4>
+        			<p>Adobe Illustrator, Photoshop</p>
+        		</div>
+
+        	</div>
+
+        	<div id="main">
+
+        		<p>During the 2018-2019 school year, I had the pleasure of being the graphic design intern for Warren College at UCSD.</p>
+
+            <p>Warren College committees organize various programs and events for students, particularly those in Warren College. Events range from social mixers to professional events. As the sole graphic designer, I created flyers, stickers, and logos for the Warren College committees.</p>
+
+            <!--
+            <div class="gallery">
+              <img src="images/warren/finalcountdown.png"/>
+              <img src="images/warren/holi2.png"/>
+              <img src="images/warren/fb-realtalk.png"/>
+              <img src="images/warren/externalfair.png"/>
+              <img src="images/warren/commuterbreakfast.png"/>
+              <img src="images/warren/disneyland.png"/>
+              <img src="images/warren/wholesomefriday.png"/>
+              <img src="images/warren/capturetheflag.png"/>
+              <img src="images/warren/internshipworkshop.png"/>
+              <img src="images/warren/newyearnewyou.png"/>
+              <img src="images/warren/lunarnewyear.png"/>
+              <img src="images/warren/sticker1-lunarnewyear.png"/>
+              <img src="images/warren/sticker2-lunarnewyear.png"/>
+              <img src="images/warren/captainmarvel.png"/>
+              <img src="images/warren/seniorspeaker.png"/>
+              <img src="images/warren/warrenlive.png"/>
+              <img src="images/warren/sticker-warrenlive.png"/>
+              <img src="images/warren/wishlogo.png"/>
+            </div>
+            -->
+
+            <!-- Images used to open the lightbox -->
+            <div id="gallery">
+              <img src="images/warren/finalcountdown.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+              <img src="images/warren/holi2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+              <img src="images/warren/fb-realtalk.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+              <img src="images/warren/commuterbreakfast.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+              <img src="images/warren/externalfair.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+              <img src="images/warren/disneyland.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
+              <img src="images/warren/wholesomefriday.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+              <img src="images/warren/capturetheflag.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+              <img src="images/warren/internshipworkshop.png" onclick="openModal();currentSlide(9)" class="hover-shadow">
+              <img src="images/warren/newyearnewyou.png" onclick="openModal();currentSlide(10)" class="hover-shadow">
+              <img src="images/warren/lunarnewyear.png" onclick="openModal();currentSlide(11)" class="hover-shadow">
+              <img src="images/warren/sticker1-lunarnewyear.png" onclick="openModal();currentSlide(12)" class="hover-shadow">
+              <img src="images/warren/captainmarvel.png" onclick="openModal();currentSlide(13)" class="hover-shadow">
+              <img src="images/warren/seniorspeaker.png" onclick="openModal();currentSlide(14)" class="hover-shadow">
+              <img src="images/warren/warrenlive.png" onclick="openModal();currentSlide(15)" class="hover-shadow">
+              <img src="images/warren/sticker-warrenlive.png" onclick="openModal();currentSlide(16)" class="hover-shadow">
+              <img src="images/warren/wishlogo.png" onclick="openModal();currentSlide(17)" class="hover-shadow">
+            </div>
+            <!--
+            <div class="row">
+              <div class="column">
+                <img src="images/warren/finalcountdown.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+              </div>
+              <div class="column">
+                <img src="images/warren/holi2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+              </div>
+              <div class="column">
+                <img src="images/warren/fb-realtalk.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+              </div>
+              <div class="column">
+                <img src="images/warren/externalfair.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+              </div>
+            </div>
+            -->
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+
+                <div class="mySlides">
+                  <img src="images/warren/finalcountdown.png">
+                </div>
+
+                <div class="mySlides">=
+                  <img src="images/warren/holi2.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/fb-realtalk.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/commuterbreakfast.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/externalfair.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/disneyland.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/wholesomefriday.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/capturetheflag.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/internshipworkshop.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/newyearnewyou.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/lunarnewyear.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/sticker1-lunarnewyear.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/captainmarvel.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/seniorspeaker.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/warrenlive.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/sticker-warrenlive.png">
+                </div>
+
+                <div class="mySlides">
+                  <img src="images/warren/wishlogo.png">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>-->
+
+                <!-- Thumbnail image controls 
+                <div class="column">
+                  <img class="demo" src="images/warren/finalcountdown.png" onclick="currentSlide(1)" alt="Nature">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="images/warren/holi2.png" onclick="currentSlide(2)" alt="Snow">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="images/warren/fb-realtalk.png" onclick="currentSlide(3)" alt="Mountains">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="images/warren/externalfair.png" onclick="currentSlide(4)" alt="Lights">
+                </div>
+              -->
+              </div>
+            </div>
+        	</div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <p>Hannah Bae ✧ 2019</p>
+        <div id="social">
+          <ul id="social-list">
+            <li id="email">
+              <a href="mailto: hannah1bae@gmail.com" title="Email">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.2 490.2" style= "enable-background:new 0 0 490.2 490.2;" xml:space="preserve">
+                  <g>
+                    <path d="M420.95,61.8C376.25,20.6,320.65,0,254.25,0c-69.8,0-129.3,23.4-178.4,70.3s-73.7,105.2-73.7,175
+                      c0,66.9,23.4,124.4,70.1,172.6c46.9,48.2,109.9,72.3,189.2,72.3c47.8,0,94.7-9.8,140.7-29.5c15-6.4,22.3-23.6,16.2-38.7l0,0
+                      c-6.3-15.6-24.1-22.8-39.6-16.2c-40,17.2-79.2,25.8-117.4,25.8c-60.8,0-107.9-18.5-141.3-55.6c-33.3-37-50-80.5-50-130.4
+                      c0-54.2,17.9-99.4,53.6-135.7c35.6-36.2,79.5-54.4,131.5-54.4c47.9,0,88.4,14.9,121.4,44.7s49.5,67.3,49.5,112.5
+                      c0,30.9-7.6,56.7-22.7,77.2c-15.1,20.6-30.8,30.8-47.1,30.8c-8.8,0-13.2-4.7-13.2-14.2c0-7.7,0.6-16.7,1.7-27.1l18.6-152.1h-64
+                      l-4.1,14.9c-16.3-13.3-34.2-20-53.6-20c-30.8,0-57.2,12.3-79.1,36.8c-22,24.5-32.9,56.1-32.9,94.7c0,37.7,9.7,68.2,29.2,91.3
+                      c19.5,23.2,42.9,34.7,70.3,34.7c24.5,0,45.4-10.3,62.8-30.8c13.1,19.7,32.4,29.5,57.9,29.5c37.5,0,69.9-16.3,97.2-49
+                      c27.3-32.6,41-72,41-118.1C488.05,152.9,465.75,103,420.95,61.8z M273.55,291.9c-11.3,15.2-24.8,22.9-40.5,22.9
+                      c-10.7,0-19.3-5.6-25.8-16.8c-6.6-11.2-9.9-25.1-9.9-41.8c0-20.6,4.6-37.2,13.8-49.8s20.6-19,34.2-19c11.8,0,22.3,4.7,31.5,14.2
+                      s13.8,22.1,13.8,37.9C290.55,259.2,284.85,276.6,273.55,291.9z"/>
+                  </g>
+                </svg>
+              </a>
+            </li>
+
+            <li id="linkedin">
+              <a href="#" title="LinkedIn">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 430.117 430.118" style="enable-background:new 0 0 430.117 430.118;"xml:space="preserve">
+                  <g>
+                    <path id="LinkedIn__x28_alt_x29_" d="M398.355,0H31.782C14.229,0,0.002,13.793,0.002,30.817v368.471
+                      c0,17.025,14.232,30.83,31.78,30.83h366.573c17.549,0,31.76-13.814,31.76-30.83V30.817C430.115,13.798,415.904,0,398.355,0z
+                       M130.4,360.038H65.413V165.845H130.4V360.038z M97.913,139.315h-0.437c-21.793,0-35.92-14.904-35.92-33.563
+                      c0-19.035,14.542-33.535,36.767-33.535c22.227,0,35.899,14.496,36.331,33.535C134.654,124.415,120.555,139.315,97.913,139.315z
+                       M364.659,360.038h-64.966V256.138c0-26.107-9.413-43.921-32.907-43.921c-17.973,0-28.642,12.018-33.327,23.621
+                      c-1.736,4.144-2.166,9.94-2.166,15.728v108.468h-64.954c0,0,0.85-175.979,0-194.192h64.964v27.531
+                      c8.624-13.229,24.035-32.1,58.534-32.1c42.76,0,74.822,27.739,74.822,87.414V360.038z M230.883,193.99
+                      c0.111-0.182,0.266-0.401,0.42-0.614v0.614H230.883z"/>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
